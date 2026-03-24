@@ -1,0 +1,6 @@
+requests==2.31.0
+pyserial==3.5
+python-dateutil==2.8.2
+schedule==1.2.0
+numpy==1.24.3
+colorama==0.4.6

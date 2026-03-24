@@ -1,0 +1,68 @@
+{
+  "station": {
+    "tide_station_id": "8452944",
+    "tide_station_name": "Conimicut Light, RI",
+    "wave_buoy_id": "44028",
+    "wave_buoy_name": "Buzzards Bay",
+    "msl_datum_ft": 0.0
+  },
+  
+  "update_intervals": {
+    "tide_observation_minutes": 6,
+    "wave_data_minutes": 60,
+    "predictions_refresh_hours": 24,
+    "stale_data_threshold_hours": 4
+  },
+  
+  "display": {
+    "num_leds": 10,
+    "gradient_neighbor_intensity": 0.15,
+    "gradient_far_intensity": 0.10,
+    "smooth_transition_seconds": 2.0
+  },
+  
+  "breathing": {
+    "min_brightness": 0.30,
+    "max_brightness": 1.00,
+    "period_min_seconds": 2.0,
+    "period_max_seconds": 8.0,
+    "default_period_seconds": 7.0
+  },
+  
+  "colors": {
+    "heat_map_thresholds_ft": {
+      "-999": [0, 0, 200],
+      "-2.0": [0, 50, 255],
+      "-1.0": [0, 150, 255],
+      "-0.3": [0, 255, 0],
+      "0.3": [150, 255, 0],
+      "1.0": [255, 200, 0],
+      "2.0": [255, 100, 0],
+      "3.0": [255, 0, 0],
+      "999": [255, 0, 0]
+    },
+    "startup_pulse": [0, 255, 200],
+    "success_blink": [0, 255, 0],
+    "failure_blink": [255, 0, 0],
+    "error_indicator": [255, 0, 0]
+  },
+  
+  "fallback": {
+    "cache_duration_hours": 48,
+    "use_synthetic_waves": false
+  },
+  
+  "serial": {
+    "baud_rate": 115200,
+    "timeout_seconds": 2.0,
+    "auto_detect": true,
+    "port_hints": ["/dev/ttyACM", "COM", "/dev/cu.usbmodem"]
+  },
+  
+  "logging": {
+    "level": "INFO",
+    "file": "logs/tide_clock.log",
+    "max_size_mb": 10,
+    "backup_count": 5
+  }
+}
