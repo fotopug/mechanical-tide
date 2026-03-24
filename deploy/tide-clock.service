@@ -1,0 +1,18 @@
+[Unit]
+Description=Mechanical Tide Clock
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/mechanical-tide
+Environment="PATH=/home/pi/mechanical-tide/venv/bin"
+ExecStart=/home/pi/mechanical-tide/venv/bin/python python/main.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/pi/mechanical-tide/logs/tide_clock.log
+StandardError=append:/home/pi/mechanical-tide/logs/tide_clock_error.log
+
+[Install]
+WantedBy=multi-user.target
