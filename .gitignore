@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Data and logs (generated at runtime)
+data/*.json
+logs/*.log
+!data/.gitkeep
+!logs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config (may contain sensitive data)
+config/config.json
+!config/config.example.json
+
+# Visual Studio
+.vs/
+*.sln
+*.suo
+*.user
+bin/
+obj/
