@@ -10,18 +10,18 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 # Add parent directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from utils.config_loader import get_config
-from utils.logger import setup_logger
-from storage.cache_manager import CacheManager
-from data_sources.noaa_tides import NOAATidesClient
-from data_sources.ndbc_waves import NDBCWavesClient
-from processors.tide_calculator import TideCalculator
-from processors.color_mapper import create_default_color_mapper
-from processors.wave_processor import WaveProcessor
-from processors.gradient_builder import GradientBuilder
-from communication.serial_controller import SerialController
+from python.utils.config_loader import get_config
+from python.utils.logger import setup_logger
+from python.storage.cache_manager import CacheManager
+from python.data_sources.noaa_tides import NOAATidesClient
+from python.data_sources.ndbc_waves import NDBCWavesClient
+from python.processors.tide_calculator import TideCalculator
+from python.processors.color_mapper import create_default_color_mapper
+from python.processors.wave_processor import WaveProcessor
+from python.processors.gradient_builder import GradientBuilder
+from python.communication.serial_controller import SerialController
 
 
 class TideClockApp:

@@ -43,11 +43,11 @@ class NDBCWavesClient:
                 self.logger.warning(f"Insufficient data from buoy {self.buoy_id}")
                 return None
             
-            # Line 0: Column headers (units)
-            # Line 1: Column names
+            # Line 0: Column names (e.g., #YY MM DD hh mm WDIR WSPD GST WVHT DPD APD...)
+            # Line 1: Column units (e.g., #yr mo dy hr mn degT m/s m/s m sec sec...)
             # Line 2+: Data rows
             
-            header_line = lines[1].split()
+            header_line = lines[0].split()
             data_line = lines[2].split()
             
             if len(data_line) < len(header_line):
